@@ -5,6 +5,7 @@ import About from "./Components/Pages/About";
 import Layout from "./Components/Layouts/Layout";
 import Register from "./Components/Pages/Register";
 import Login from "./Components/Pages/Login";
+import Meet from "./Components/Pages/Meet";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/join-now" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Meet />} />
       </Routes>
     </>
   );
