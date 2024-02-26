@@ -87,12 +87,16 @@ const Register = () => {
           </label>
           <br />
           <div className={css.buttonDiv}>
-          <button type="submit" className={css.button} onSubmit={handleSubmit}>
-            Register
-          </button>
-          <Link to="/login" type="button"className={css.button} >
-            Already a User
-          </Link>
+            <button
+              type="submit"
+              className={css.button}
+              onSubmit={handleSubmit}
+            >
+              Register
+            </button>
+            <Link to="/login" type="button" className={css.button}>
+              Already a User
+            </Link>
           </div>
         </form>
       </div>
