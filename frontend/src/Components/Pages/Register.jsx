@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import css from "../../Styles/Register.module.css";
+const navigate = useNavigate();
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -21,6 +22,8 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+
+    navigate("/login");
   };
   return (
     <>
@@ -72,9 +75,9 @@ const Register = () => {
             />
           </label>
           <br />
-          <Link to="/Register" type="submit" className={css.button}>
+          <button type="submit" className={css.button}>
             Register
-          </Link>
+          </button>
         </form>
       </div>
     </>
