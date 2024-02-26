@@ -1,0 +1,42 @@
+/* Footer.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footercontainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footercontainer p {
+  margin: 5px 0;
+}
+
+.footercontainer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footercontainer a:hover {
+  text-decoration: underline;
+}
+
+.footercontainer p.left {
+  text-align: left;
+}
+
+.footercontainer p.center {
+  text-align: center;
+}
+
+.footercontainer p.right {
+  text-align: right;
+}
