@@ -1,3 +1,8 @@
+.buttonDiv{
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .registerContainer {
   max-width: 400px;
   margin: 0 auto;
