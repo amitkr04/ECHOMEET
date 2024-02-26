@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import css from "../../Styles/Register.module.css";
 
 const Register = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -21,6 +23,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    navigate("/login");
   };
   return (
     <>
@@ -72,9 +75,14 @@ const Register = () => {
             />
           </label>
           <br />
-          <Link to="/Register" type="submit" className={css.button}>
+          <div className={css.buttonDiv}>
+          <button type="submit" className={css.button} onSubmit={handleSubmit}>
             Register
+          </button>
+          <Link to="/login" type="button"className={css.button} >
+            Already a User
           </Link>
+          </div>
         </form>
       </div>
     </>
