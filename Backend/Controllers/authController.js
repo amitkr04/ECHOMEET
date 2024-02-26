@@ -5,6 +5,7 @@ import JWT from "jsonwebtoken";
 export const registercontroller = async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
+    console.log(`${name} ${email}`);
 
     //validation
     if (!name) {

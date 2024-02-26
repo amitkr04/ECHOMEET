@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import css from "../../Styles/Register.module.css";
+import axios from "axios";
 
 const Register = () => {
+  const instance = axios.create({
+    baseURL: 'http://127.0.0.1:9000/api/v1/auth', // Set your backend URL here
+  });
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    username: "",
+    name: "",
     email: "",
     password: "",
     phone: "",
@@ -20,10 +24,17 @@ const Register = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    navigate("/login");
+    try {
+      const response = await instance.post("/register", formData);
+      console.log(`The response after form submition is: ${response}`);
+      console.log("Form submitted:", formData);
+      navigate("/login");
+    } catch (error) {
+      console.error(`The error is: ${error}`);
+    }
+    
   };
   return (
     <>
@@ -34,7 +45,7 @@ const Register = () => {
             Username:
             <input
               type="text"
-              name="username"
+              name="name"
               value={formData.username}
               onChange={handleChange}
               required
