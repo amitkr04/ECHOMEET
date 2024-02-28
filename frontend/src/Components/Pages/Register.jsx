@@ -49,7 +49,7 @@ const Register = () => {
     
       <div className={css.registerContainer}>
         <h2>Register</h2>
-        <form className={css.form} onSubmit={handleSubmit}>
+        <form className={css.registerForm} onSubmit={handleSubmit}>
           <label>
             Username:
             <input

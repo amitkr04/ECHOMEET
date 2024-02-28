@@ -23,13 +23,13 @@
   opacity: 1;
 }
 
-form {
+.registerForm {
   display: flex;
   flex-direction: column;
 }
 
 /* Label styles */
-label {
+.registerForm label {
   /* background-color: red; */
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ label {
 }
 
 /* Input styles */
-input {
+.registerForm input {
   display: block;
   padding: 3px;
   margin-bottom: 1px;
@@ -50,8 +50,8 @@ input {
   box-sizing: border-box;
   background: transparent;
   border: 1px solid black !important;
-  border-radius: 20px;
-  padding: 50px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* Button styles */
