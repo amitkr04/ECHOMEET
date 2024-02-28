@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import css from "../../Styles/Register.module.css";
+import BackImage from "../../assets/Images/registerbackimg.jpg";
 import axios from "axios";
 
 const Register = () => {
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:9000/api/v1/auth', // Set your backend URL here
+    baseURL: "http://127.0.0.1:9000/api/v1/auth", // Set your backend URL here
   });
   const navigate = useNavigate();
 
@@ -34,10 +35,16 @@ const Register = () => {
     } catch (error) {
       console.error(`The error is: ${error}`);
     }
-    
   };
   return (
     <>
+      <div>
+        <img
+          src={BackImage}
+          alt="Background Image"
+          className={css.Background}
+        />
+      </div>
       <div className={css.registerContainer}>
         <h2>Register</h2>
         <form className={css.form} onSubmit={handleSubmit}>

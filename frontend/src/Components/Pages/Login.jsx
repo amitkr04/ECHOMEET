@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Login = () => {
   const instance = axios.create({
-    baseURL: 'http://127.0.0.1:9000/api/v1/auth', // Set your backend URL here
+    baseURL: "http://127.0.0.1:9000/api/v1/auth", // Set your backend URL here
   });
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -57,7 +57,9 @@ const Login = () => {
             required
           />
         </label>
-        <button type="submit" onSubmit={handleSubmit}>Login</button>
+        <button type="submit" onSubmit={handleSubmit}>
+          Login
+        </button>
       </form>
     </div>
   );

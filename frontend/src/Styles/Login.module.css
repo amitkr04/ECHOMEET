@@ -1,32 +1,23 @@
-/* Login.module.css */
-
-/* Container styles */
 .loginContainer {
   max-width: 400px;
   margin: 0 auto;
 }
 
-/* Form styles */
 form {
   display: flex;
   flex-direction: column;
 }
-
-/* Label styles */
 label {
   margin-bottom: 10px;
   font-weight: bold;
 }
 
-/* Input styles */
 input {
   padding: 8px;
   margin-bottom: 15px;
   width: 100%;
   box-sizing: border-box;
 }
-
-/* Button styles */
 button {
   padding: 10px;
   background-color: #007bff;
@@ -40,14 +31,12 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Heading styles */
 h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* Responsive styles */
 @media (max-width: 600px) {
   .loginContainer {
     max-width: 100%;
