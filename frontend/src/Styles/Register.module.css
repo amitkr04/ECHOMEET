@@ -30,6 +30,11 @@ form {
 
 /* Label styles */
 label {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: center;
   margin-bottom: 5px;
   font-weight: bold;
   /* padding: 0px; */
@@ -38,11 +43,13 @@ label {
 
 /* Input styles */
 input {
+  display: block;
   padding: 3px;
   margin-bottom: 1px;
-  width: 100%;
+  width: 20em;
   box-sizing: border-box;
   background: transparent;
+  border: 1px solid black !important;
   border-radius: 20px;
   padding: 50px;
 }

@@ -40,15 +40,6 @@ const Register = () => {
   };
   return (
     <>
-<<<<<<< HEAD
-      <div>
-        <img
-          src={BackImage}
-          alt="Background Image"
-          className={css.Background}
-        />
-      </div>
-=======
     <div>
           <img
             src={Backpic}
@@ -56,7 +47,6 @@ const Register = () => {
             alt="Your App Logo"
           />
     
->>>>>>> Yuvraj
       <div className={css.registerContainer}>
         <h2>Register</h2>
         <form className={css.form} onSubmit={handleSubmit}>
