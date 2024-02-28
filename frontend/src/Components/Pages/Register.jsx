@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import css from "../../Styles/Register.module.css";
 import axios from "axios";
+import Backpic from '../../assets/Images/registerback.jpg'
+
 
 const Register = () => {
   const instance = axios.create({
@@ -38,6 +40,13 @@ const Register = () => {
   };
   return (
     <>
+    <div>
+          <img
+            src={Backpic}
+            className={css.Backpic}
+            alt="Your App Logo"
+          />
+    
       <div className={css.registerContainer}>
         <h2>Register</h2>
         <form className={css.form} onSubmit={handleSubmit}>
@@ -95,6 +104,7 @@ const Register = () => {
           </Link>
           </div>
         </form>
+      </div>
       </div>
     </>
   );
